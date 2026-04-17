@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>키즈 스케줄 - 개인정보처리방침</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; color: #333; }
+  h1 { color: #1E88E5; border-bottom: 2px solid #1E88E5; padding-bottom: 10px; }
+  h2 { color: #424242; margin-top: 30px; }
+  .date { color: #757575; font-size: 14px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  .contact { background: #E3F2FD; padding: 16px; border-radius: 8px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<h1>📋 개인정보처리방침</h1>
+<p class="date">시행일: 2026년 4월 17일</p>
+
+<p><strong>키즈 스케줄</strong>(이하 "앱")은 어린이의 학원 관리 및 숙제 검사를 위한 가족용 앱입니다. 본 개인정보처리방침은 앱이 수집하는 정보와 그 사용 방법을 설명합니다.</p>
+
+<h2>1. 수집하는 개인정보</h2>
+<ul>
+  <li><strong>부모 계정</strong>: 이메일 주소, 비밀번호 (Supabase Auth를 통해 관리)</li>
+  <li><strong>어린이 정보</strong>: 이름, 생년월일, 성별, 로그인 아이디</li>
+  <li><strong>학원 정보</strong>: 학원 이름, 스케줄, 수강료</li>
+  <li><strong>숙제 정보</strong>: 숙제 제목, 메모, 완료 상태</li>
+  <li><strong>응원 메시지</strong>: 부모가 어린이에게 보내는 메시지 내용</li>
+</ul>
+
+<h2>2. 개인정보의 수집 목적</h2>
+<ul>
+  <li>부모와 어린이 간 학원/숙제 정보 공유</li>
+  <li>학원 출발 알림 제공</li>
+  <li>수강료 결제일 알림 제공</li>
+  <li>AI 기반 응원 메시지 생성 (Gemini API 활용)</li>
+</ul>
+
+<h2>3. 개인정보의 보관 및 저장</h2>
+<ul>
+  <li>모든 데이터는 사용자가 직접 설정한 <strong>Supabase</strong> 클라우드 서버에 저장됩니다.</li>
+  <li>앱 개발자는 사용자의 Supabase 서버에 접근하지 않으며, 데이터를 수집하지 않습니다.</li>
+  <li>각 가족이 독립적인 Supabase 프로젝트를 사용하므로 다른 가족의 데이터와 분리됩니다.</li>
+</ul>
+
+<h2>4. 제3자 서비스</h2>
+<ul>
+  <li><strong>Supabase</strong>: 데이터 저장 및 인증 (<a href="https://supabase.com/privacy">Supabase 개인정보처리방침</a>)</li>
+  <li><strong>Google Gemini API</strong>: AI 응원 메시지 생성 시 어린이의 이름, 나이, 성별 정보가 전송됩니다 (<a href="https://ai.google.dev/terms">Google AI 이용약관</a>)</li>
+</ul>
+
+<h2>5. 어린이 개인정보 보호</h2>
+<ul>
+  <li>본 앱은 부모의 관리 하에 어린이가 사용하는 앱입니다.</li>
+  <li>어린이 계정은 부모가 생성하며, 부모의 동의 없이 어린이가 직접 계정을 생성할 수 없습니다.</li>
+  <li>어린이의 개인정보는 부모가 설정한 Supabase 서버에만 저장됩니다.</li>
+  <li>앱 개발자는 어린이의 개인정보를 직접 수집하거나 저장하지 않습니다.</li>
+</ul>
+
+<h2>6. 데이터 삭제</h2>
+<ul>
+  <li>부모는 앱 내에서 어린이 계정을 삭제할 수 있습니다.</li>
+  <li>Supabase 프로젝트를 삭제하면 모든 데이터가 영구 삭제됩니다.</li>
+  <li>앱을 삭제하면 기기에 저장된 로컬 데이터(설정값)가 삭제됩니다.</li>
+</ul>
+
+<h2>7. 보안</h2>
+<ul>
+  <li>Supabase의 보안 인프라를 통해 데이터가 보호됩니다.</li>
+  <li>모든 통신은 HTTPS로 암호화됩니다.</li>
+</ul>
+
+<h2>8. 변경 사항</h2>
+<p>본 개인정보처리방침은 변경될 수 있으며, 변경 시 앱 내 공지를 통해 안내합니다.</p>
+
+<div class="contact">
+  <h2 style="margin-top:0">9. 문의</h2>
+  <p>개인정보 관련 문의사항이 있으시면 아래로 연락해 주세요.</p>
+  <p>📧 이메일: <strong>karthpark@gmail.com</strong></p>
+</div>
+
+</body>
+</html>
