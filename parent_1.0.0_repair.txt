@@ -1,0 +1,21 @@
+이전 버전에서 SQL을 실행 후 에러가 발생한 분들은 아래의 SQL을 모두 복사하여 supabase의 SQL Editor에 붙여넣고 실행하면 오류가 해결됩니다.
+-- children 테이블 누락 컬럼
+ALTER TABLE children ADD COLUMN IF NOT EXISTS login_id TEXT;
+ALTER TABLE children ADD COLUMN IF NOT EXISTS password TEXT NOT NULL DEFAULT '1234';
+CREATE UNIQUE INDEX IF NOT EXISTS idx_children_login_id ON children(login_id) WHERE deleted_at IS NULL;
+
+-- schedules/homeworks 테이블 누락 컬럼
+ALTER TABLE schedules ADD COLUMN IF NOT EXISTS repeat_group_id UUID;
+ALTER TABLE homeworks ADD COLUMN IF NOT EXISTS repeat_group_id UUID;
+
+-- 알림 설정 테이블
+CREATE TABLE IF NOT EXISTS notification_settings (
+  parent_id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+  global_enabled BOOLEAN NOT NULL DEFAULT true,
+  tuition_enabled BOOLEAN NOT NULL DEFAULT true,
+  alert_minutes INTEGER NOT NULL DEFAULT 10,
+  disabled_academies TEXT[] DEFAULT '{}',
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT now()
+);
+ALTER TABLE notification_settings ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "anon_all" ON notification_settings FOR ALL USING (true) WITH CHECK (true);
