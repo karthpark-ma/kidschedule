@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>키즈 스케줄 - 초기 설정 가이드</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto; padding: 16px; line-height: 1.8; color: #333; background: #f8f9fa; }
+  h1 { color: #1E88E5; text-align: center; font-size: 22px; }
+  h2 { color: #424242; margin-top: 30px; font-size: 18px; border-left: 4px solid #1E88E5; padding-left: 10px; }
+  .step { background: white; border-radius: 12px; padding: 16px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .step img { width: 100%; border-radius: 8px; border: 1px solid #eee; margin: 8px 0; }
+  .step p { margin: 8px 0; font-size: 14px; }
+  .num { display: inline-block; background: #1E88E5; color: white; width: 24px; height: 24px; border-radius: 12px; text-align: center; line-height: 24px; font-size: 13px; font-weight: bold; margin-right: 6px; }
+  .warn { background: #FFF3E0; border: 1px solid #FFB74D; border-radius: 8px; padding: 12px; margin: 12px 0; font-size: 13px; }
+  .warn::before { content: '⚠️ '; }
+  .tip { background: #E3F2FD; border: 1px solid #90CAF9; border-radius: 8px; padding: 12px; margin: 12px 0; font-size: 13px; }
+  .tip::before { content: '💡 '; }
+</style>
+</head>
+<body>
+
+<h1>📖 키즈 스케줄 초기 설정 가이드</h1>
+<p style="text-align:center; color:#757575; font-size:13px;">처음 사용하시는 분을 위한 단계별 안내입니다.</p>
+
+<h2>1단계: Supabase 설정</h2>
+
+<div class="step">
+  <p><span class="num">1</span> <a href="https://supabase.com" target="_blank">supabase.com</a>에 회원가입을 위해 접속합니다.</p>
+  <img src="manual/1.supabase설정.png" alt="Supabase 접속">
+</div>
+
+<div class="step">
+  <p><span class="num">2</span> Sign up을 눌러 회원가입 화면으로 이동합니다.</p>
+  <img src="manual/2.supabase설정.png" alt="Sign up">
+</div>
+
+<div class="step">
+  <p><span class="num">3</span> 구글계정 이메일과 비밀번호를 입력하고 Sign Up 버튼을 누릅니다.</p>
+  <img src="manual/3.supabase설정.png" alt="회원가입">
+</div>
+
+<div class="step">
+  <p><span class="num">4</span> Name(원하는 이름 입력), Type(Personal), Plan(Free) 입력 후 Create organization을 누릅니다.</p>
+  <img src="manual/4.supabase설정.png" alt="Organization 생성">
+</div>
+
+<div class="step">
+  <p><span class="num">5</span> 프로젝트 이름과 데이터베이스 비밀번호를 입력하고 지역은 <strong>Northeast Asia (Seoul)</strong>을 선택하고 Create new project를 누릅니다.</p>
+  <img src="manual/5.supabase설정.png" alt="프로젝트 생성">
+</div>
+
+<div class="step">
+  <p><span class="num">6</span> Project가 생성되면 Project overview 화면에서 <strong>Project URL</strong>을 복사해둡니다.</p>
+  <img src="manual/6.supabase설정.png" alt="Project URL 복사">
+</div>
+
+<div class="step">
+  <p><span class="num">7</span> Project Settings > API Keys로 이동합니다.</p>
+  <img src="manual/7.supabase설정.png" alt="API Keys">
+</div>
+
+<div class="step">
+  <p><span class="num">8</span> Legacy anon, service_role API keys 탭으로 이동 후 <strong>anon key</strong>를 복사해둡니다.</p>
+  <img src="manual/8.supabase설정.png" alt="anon key 복사">
+</div>
+
+<div class="step">
+  <p><span class="num">9</span> Authentication > Sign In / Providers로 이동합니다.</p>
+  <img src="manual/9.supabase설정.png" alt="Authentication Providers">
+</div>
+
+<div class="step">
+  <p><span class="num">10</span> <strong>Confirm email을 OFF</strong>로 설정하고 Save changes를 눌러 설정을 저장합니다.</p>
+  <img src="manual/10.supabase설정.png" alt="Confirm email OFF">
+</div>
+
+<div class="warn">Confirm email이 ON이면 계정 생성 후 로그인이 안 됩니다. 반드시 OFF로 설정해 주세요.</div>
+
+<h2>2단계: Gemini AI 설정 (선택)</h2>
+<p style="font-size:13px; color:#757575;">AI 응원 메시지 기능을 사용하려면 설정해 주세요. 없어도 앱은 동작합니다.</p>
+
+<div class="step">
+  <p><span class="num">11</span> <a href="https://aistudio.google.com" target="_blank">aistudio.google.com</a>에 접속하여 Google 계정으로 로그인하고 Get API Key로 이동합니다.</p>
+  <img src="manual/11.Gemini AI 설정.png" alt="AI Studio">
+</div>
+
+<div class="step">
+  <p><span class="num">12</span> "API 키 만들기"를 누르고 팝업창이 뜨면 "키 만들기"를 누릅니다.</p>
+  <img src="manual/12.Gemini AI 설정.png" alt="API 키 만들기">
+</div>
+
+<div class="step">
+  <p><span class="num">13</span> 생성된 <strong>Gemini API key</strong>를 복사해둡니다.</p>
+  <img src="manual/13.Gemini AI 설정.png" alt="API key 복사">
+</div>
+
+<h2>3단계: 앱 설정</h2>
+
+<div class="step">
+  <p><span class="num">14</span> 앱을 실행하면 서버 설정 화면이 나타납니다. <strong>Supabase URL</strong>과 <strong>anon Key</strong> 그리고 <strong>Gemini API Key</strong>(선택)를 입력하고 저장 및 연결을 누릅니다.</p>
+  <img src="manual/14.앱설정.png" alt="서버 설정">
+</div>
+
+<div class="step">
+  <p><span class="num">15</span> 데이터베이스 생성이 되지 않아 아래와 같은 화면이 출력되면 <strong>"SQL 복사"</strong>를 누른 후 <strong>"SQL Editor 열기"</strong>를 눌러 이동합니다.</p>
+  <img src="manual/15.앱설정.png" alt="SQL 복사">
+</div>
+
+<div class="step">
+  <p><span class="num">16</span> supabase 화면으로 이동하면 프로젝트를 눌러 상세화면으로 진입합니다.</p>
+  <img src="manual/16.앱설정.png" alt="프로젝트 선택">
+</div>
+
+<div class="step">
+  <p><span class="num">17</span> SQL 실행을 위해 <strong>SQL Editor</strong>로 이동합니다.</p>
+  <img src="manual/17.앱설정.png" alt="SQL Editor">
+</div>
+
+<div class="step">
+  <p><span class="num">18</span> 복사한 SQL을 아래 화면과 같이 붙여넣고 <strong>Run</strong>을 눌러 실행합니다.</p>
+  <img src="manual/18.앱설정.png" alt="SQL 실행">
+</div>
+
+<div class="step">
+  <p><span class="num">19</span> 다시 키즈 스케줄 앱으로 돌아와서 <strong>"SQL실행완료→확인"</strong> 버튼을 누릅니다.</p>
+  <img src="manual/19.앱설정.png" alt="설정 완료">
+</div>
+
+<div class="tip">어린이 앱도 동일한 Supabase URL과 Key를 입력하면 됩니다.</div>
+
+<div class="tip">궁금한 점이 있으면 <strong>karthpark@gmail.com</strong>으로 문의해 주세요.</div>
+
+</body>
+</html>
